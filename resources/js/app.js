@@ -1,12 +1,10 @@
-// app.js
-require('./bootstrap');
+require("./bootstrap");
 
-import App from "./components/App.svelte";
+import { createInertiaApp } from "@inertiajs/inertia-svelte";
 
-const app = new App({
-  target: document.body
+createInertiaApp({
+    resolve: (name) => require(`./Pages/${name}.svelte`),
+    setup({ el, App, props }) {
+        new App({ target: el, props });
+    },
 });
-
-window.app = app;
-
-export default app;
