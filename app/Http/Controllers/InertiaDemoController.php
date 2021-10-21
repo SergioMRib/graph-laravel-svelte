@@ -8,7 +8,7 @@ class InertiaDemoController extends Controller
 {
     public function show(String $username)
     {
-        return Inertia::render('Demo/Show', [
+        return Inertia::render('Demo', [
             'username' => $username
         ]);
     }

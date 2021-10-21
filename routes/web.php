@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InertiaDemoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inertia/{username}', function () {
-    return view('welcome');
-});
+Route::get('/inertia/{username}', [InertiaDemoController::class, 'show']);
