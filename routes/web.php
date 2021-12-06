@@ -14,8 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/inertia/{username}', [InertiaDemoController::class, 'show']);
+Route::get('/', [InertiaDemoController::class, 'singleChart']);
+Route::get('/region', [InertiaDemoController::class, 'multipleChart']);

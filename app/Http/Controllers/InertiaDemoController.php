@@ -12,4 +12,12 @@ class InertiaDemoController extends Controller
             'username' => $username
         ]);
     }
+
+    public function singleChart() {
+        return Inertia::render('SingleChart');
+    }
+
+    public function multipleChart() {
+        return Inertia::render('MultipleChart');
+    }
 }
