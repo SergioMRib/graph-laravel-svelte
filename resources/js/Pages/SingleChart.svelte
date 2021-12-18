@@ -138,6 +138,9 @@ import Chart from 'chart.js/auto';
 	<h3 class="mb-5 text-center">Your data results</h3>
 	
    <!--  <Link to="region">All regions</Link> -->
+    {#if graphData.length === 0}
+    <p class="text-center">No data was provided to the chart.</p>
+    {/if}
     <div class="container"> 
         <div class="row">
             <div id="myDiv" class="col-lg-7 border border-dark my-1 p-3">
