@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [InertiaDemoController::class, 'singleChart']);
 Route::get('/region', [InertiaDemoController::class, 'multipleChart']);
+Route::get('/sayhi', function() { 
+    return "Hi!";
+});
