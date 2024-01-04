@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InertiaDemoController;
+use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [InertiaDemoController::class, 'singleChart']);
-Route::get('/region', [InertiaDemoController::class, 'multipleChart']);
-Route::get('/sayhi', function() { 
-    return "Hi!";
-});
+Route::get('/', [SurveyController::class, 'index'])->name('survey');
+Route::get('/chart', [InertiaDemoController::class, 'singleChart'])->name('chart');
+Route::get('/multichart', [InertiaDemoController::class, 'multipleChart'])->name('multichart');
