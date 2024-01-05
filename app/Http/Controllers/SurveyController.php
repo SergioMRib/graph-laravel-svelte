@@ -10,8 +10,14 @@ class SurveyController extends Controller
 {
     public function index() {
 
+        $item = Question::all()->map(function($item) {
+                    $item['choice'] = 0;
+
+                    return $item;
+                });
+
         return Inertia::render('Survey', [
-            'questions' => Question::all()
+            'questions' => $item
         ]);
 
     }
